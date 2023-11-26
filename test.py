@@ -9,3 +9,4 @@ print("MAXII!!")
 print("Rik")
 
 print("pull test voor rik")
+print("hallo mensen")
