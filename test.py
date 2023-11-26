@@ -10,3 +10,5 @@ print("Rik")
 
 print("pull test voor rik")
 print("hallo mensen")
+
+print("MAXI=KING_OFTHEWORLD:-)")
