@@ -1,5 +1,6 @@
-import pandas as pd
 import os
+
+import pandas as pd
 
 
 def load_csv(folder_path):
@@ -11,7 +12,7 @@ def load_csv(folder_path):
             file_path = os.path.join(folder_path, filename)
             df = pd.read_csv(file_path)
             dataframes.append(df)
-            print("File",file,"complete")
+            print("File", file, "complete")
             file += 1
 
     combined_df = pd.concat(dataframes, ignore_index=True)
