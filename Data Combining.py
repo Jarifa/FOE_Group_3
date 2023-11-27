@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 
+
 def load_csv(folder_path):
     dataframes = []
     file = 1
@@ -15,6 +16,7 @@ def load_csv(folder_path):
 
     combined_df = pd.concat(dataframes, ignore_index=True)
     return combined_df
+
 
 path = "Datasets"
 df = load_csv(path)
