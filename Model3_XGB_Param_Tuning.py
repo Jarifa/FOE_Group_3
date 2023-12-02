@@ -22,14 +22,14 @@ param_grid = {
     'colsample_bytree': [0.95, 1.0, 1.05]
 }
 
-# Creating the GridSearchCV object
+# Creating the Grid Search
 model = XGBRegressor(random_state=42)
 grid_search = GridSearchCV(model, param_grid, cv=3, n_jobs=-1, verbose=10, scoring='neg_mean_absolute_error')
 
 # Performing hyperparameter tuning
 grid_search.fit(X_train, y_train)
 
-# Best parameters
+# return best parameters
 print("Best parameters:", grid_search.best_params_)
 
 # Using the best estimator for predictions
