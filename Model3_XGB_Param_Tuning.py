@@ -2,9 +2,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from xgboost import XGBRegressor
 
-# Read the dataset
+# Read the prepared dataset
 data = pd.read_csv('Datasets/Cleaned_prepared_data.csv')
-data = data[(data['longitude'] <= 20) & (data['longitude'] >= -20)]
 
 # Selecting the features and targets
 features = data[['latitude', 'longitude', 'baro_altitude', 'ground_speed', 'track', 'vertical_rate', 'Climbing', 'Descending', 'Cruise']]
@@ -32,5 +31,6 @@ grid_search.fit(X_train, y_train)
 # return best parameters
 print("Best parameters:", grid_search.best_params_)
 
-# Using the best estimator for predictions
+# Using the model with the best parameters found for further predictions or analysis
 best_model = grid_search.best_estimator_
+print(best_model)
